@@ -29,26 +29,25 @@ Installation (UNIX-like systems)
 
 Create a virtual environment
 
-``
-python3 -m venv /path/to/venv
-source /path/to/venv/bin/activate
-``
+.. code-block:: bash
+    python3 -m venv /path/to/venv
+    source /path/to/venv/bin/activate
+
 
 Now install dev and test requirements
 
-``
-pip install -r requirements/dev.txt
-pip install -r requirements/test.txt
-``
+.. code-block:: bash
+    pip install -r requirements/dev.txt
+    pip install -r requirements/test.txt
+
 
 Tests
 -----
 
 Just run:
 
-``
-pytest tests/*
-``
+.. code-block:: bash
+    pytest tests/*
 
 
 Credits
