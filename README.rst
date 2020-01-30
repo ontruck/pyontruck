@@ -29,14 +29,14 @@ Installation (UNIX-like systems)
 
 Create a virtual environment
 
-```bash
+```
 python3 -m venv /path/to/venv
 source /path/to/venv/bin/activate
 ```
 
 Now install dev and test requirements
 
-```bash
+```
 pip install -r requirements/dev.txt
 pip install -r requirements/test.txt
 ```
@@ -46,7 +46,7 @@ Tests
 
 Just run:
 
-```bash
+```
 pytest tests/*
 ```
 
