@@ -30,6 +30,7 @@ def list_without_duplicates_and_nones(list_without_duplicates, none_list):
 
 
 # If you want to use fixtures as parametrize arguments, need pytest_cases extension
+# Ref: https://stackoverflow.com/questions/42228895/how-to-parametrize-a-pytest-fixture/56871701#56871701
 @pytest_parametrize_plus("expected_list, list_to_test", [
     (fixture_ref(list_without_duplicates), fixture_ref(list_without_duplicates)),
     ([], fixture_ref(none_list)),
