@@ -1,10 +1,11 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from freezegun import freeze_time
 import pytest
 import pytz
 from pytest_cases import pytest_parametrize_plus, fixture_ref
 
-from pyontruck.timing import get_next_monday, get_naive_time_utc
+from pyontruck.timing import get_next_monday, get_naive_time_utc, parse_to_timedelta
+
 
 
 @pytest.fixture
@@ -43,3 +44,17 @@ def test_naive_time_utc_errors(datetime_value, country_code, exception_raised):
 def test_naive_time_utc(datetime_value, country_code, timezone_region):
     assert pytz.timezone(timezone_region).localize(datetime_value).astimezone(pytz.utc) == get_naive_time_utc(
         datetime_value, country_code=country_code)
+
+
+@pytest.mark.parametrize("timedelta_string, expected_result", [
+    ('7d', timedelta(days=7)),
+    ('24h', timedelta(hours=24)),
+    ('60m', timedelta(minutes=60)),
+    ('120s', timedelta(seconds=120))])
+def test_parse_to_timedelta(timedelta_string, expected_result):
+    assert parse_to_timedelta(timedelta_string) == expected_result
+
+
+def test_parse_to_timedelta_error():
+    with pytest.raises(Exception):
+        parse_to_timedelta('wrong string')
