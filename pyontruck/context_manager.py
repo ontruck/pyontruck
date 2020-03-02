@@ -1,3 +1,7 @@
+# _mutable is an attribute defined in some classes in Django!
+# Check: https://docs.djangoproject.com/en/2.2/_modules/django/http/request/#QueryDict
+# TODO: add this context manager in djontruck library, not here
+"""
 class MakeMutable:
     def __init__(self, unmutable):
         self.unmutable = unmutable
@@ -11,6 +15,7 @@ class MakeMutable:
 
 def make_mutable(unmutable):
     return MakeMutable(unmutable)
+"""
 
 
 class EditDict:
