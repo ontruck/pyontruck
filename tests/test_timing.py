@@ -1,3 +1,9 @@
+"""
+test_pyontruck
+----------------------------------
+
+Tests for `pyontruck.timing` module.
+"""
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 import pytest
