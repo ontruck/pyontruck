@@ -42,7 +42,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author="Jorge Arevalo",
     author_email='jorge.arevalo@ontruck.com',
-    url='https://github.com/jorgeas80/pyontruck',
+    url='https://github.com/ontruck/pyontruck',
     packages=[
         'pyontruck',
     ],

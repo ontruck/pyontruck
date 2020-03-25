@@ -27,5 +27,5 @@ deploy:
     secure: PLEASE_REPLACE_ME
   on:
     tags: true
-    repo: jorgeas80/pyontruck
+    repo: ontruck/pyontruck
     condition: $TOXENV == py27
