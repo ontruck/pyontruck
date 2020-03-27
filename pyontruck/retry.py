@@ -27,7 +27,7 @@ def __retry(f, tries, delay, backoff=1):
     while _tries:
         try:
             return f()
-        except Exception as e:
+        except Exception:
             _tries -= 1
             sleep(delay)
             _delay *= backoff

@@ -1,59 +1,92 @@
-===============================
-Ontruck utils for our Python projects
-===============================
+=============================
+pyontruck
+=============================
 
-.. image:: https://img.shields.io/pypi/v/pyontruck.svg
-        :target: https://pypi.python.org/pypi/pyontruck
+.. image:: https://user-images.githubusercontent.com/4689706/77090966-3504a180-6a08-11ea-8cfb-7ac145d65d43.png
+    :target: https://ontruck.com
 
-.. image:: https://img.shields.io/travis/ontruck/pyontruck.svg
-        :target: https://travis-ci.org/ontruck/pyontruck
-
-.. image:: https://readthedocs.org/projects/pyontruck/badge/?version=latest
-        :target: https://readthedocs.org/projects/pyontruck/?badge=latest
-        :alt: Documentation Status
+|build-status| |coverage| |docs| |license|
 
 
-Python utils for Ontruck projects
 
-* Free software: MIT license
-* Documentation: https://pyontruck.readthedocs.org.
+Django extended by Ontruck-ers
+
+Documentation
+-------------
+
+The full documentation is at https://pyontruck.readthedocs.io.
+
+Quickstart
+----------
+
+Install pyontruck::
+
+    pip install pyontruck
+
 
 Features
---------
-
-* TODO
-
-
-Installation (UNIX-like systems)
 ------------
 
-Create a virtual environment::
+* Context manager to edit dict
+* Retry decorator
+* Sequence utils
+* Time utils
 
-    python3 -m venv /path/to/venv
-    source /path/to/venv/bin/activate
+Running Tests
+-------------
 
+Does the code actually work?
 
-Now install dev and test requirements::
+Prepare test env
 
-    pip install -r requirements/dev.txt
-    pip install -r requirements/test.txt
+::
 
-
-Tests
------
-
-Just run::
-
-    pytest tests/*
+    source <YOURVIRTUALENV>/bin/activate
+    (myenv) $ pip install -r requirements/test.txt
 
 
-Credits
----------
+Run tests
 
-Tools used in rendering this package:
+::
 
-*  Cookiecutter_
-*  `cookiecutter-pypackage`_
+    (myenv) $ make test
 
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+Run tests in several python versions using tox
+
+::
+
+    (myenv) $ make test-all
+
+
+Run tests getting code coverage
+
+
+::
+
+    (myenv) $ make coverage
+
+
+Generate documentation
+----------------------
+
+::
+
+    (myenv) $ pip install -r requirements/dev.txt
+    (myenv) $ make docs
+
+
+.. |build-status| image:: https://travis-ci.org/ontruck/pyontruck.svg?branch=master
+    :target: https://travis-ci.org/ontruck/pyontruck
+    :alt: Build status
+
+.. |coverage| image:: https://codecov.io/gh/ontruck/pyontruck/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/ontruck/pyontruck
+    :alt: Coverage status
+
+.. |docs| image:: https://readthedocs.org/projects/pyontruck/badge/?version=latest
+    :target: https://pyontruck.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+.. |license| image:: https://img.shields.io/pypi/l/celery.svg
+    :alt: BSD License
+    :target: https://opensource.org/licenses/BSD-3-Clause
