@@ -1,28 +1,22 @@
 # Config file for automatic testing at travis-ci.org
-# This file will be regenerated if you run travis_pypi_setup.py
 
 language: python
 
-env:
-  - TOXENV=py35
-  - TOXENV=py34
-  - TOXENV=py33
+matrix:
+  include:
+        - python: 3.7
+          env: TOXENV=py37-django-21
+        - python: 3.6
+          env: TOXENV=py36-django-21
+        - python: 3.5
+          env: TOXENV=py35-django-21
+  fast_finish: true
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -U tox
+install: pip install -r requirements/test.txt
 
-# command to run tests, e.g. python setup.py test
+# command to run tests using coverage, e.g. python setup.py test
 script: tox
 
-# After you create the Github repo and add it to Travis, run the
-# travis_pypi_setup.py script to finish PyPI deployment setup
-deploy:
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: jorgeas80
-  password:
-    secure: PLEASE_REPLACE_ME
-  on:
-    tags: true
-    repo: ontruck/pyontruck
-    condition: $TOXENV == py35
+after_success:
+  - codecov

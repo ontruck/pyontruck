@@ -3,7 +3,7 @@
 History
 -------
 
-0.1.0 (2020-01-26)
+0.1.0 (2020-03-27)
 ---------------------
 
-* First release on PyPI.
+* First release. Ready to be integrated with ontruck core
