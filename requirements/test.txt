@@ -1,4 +1,7 @@
 -r prod.txt
-pytest
+coverage
+flake8==3.7.7
+pytest==4.5.0
 pytest-cases
-freezegun
+freezegun==0.3.11
+tox

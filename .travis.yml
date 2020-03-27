@@ -5,11 +5,11 @@ language: python
 matrix:
   include:
         - python: 3.7
-          env: TOXENV=py37-django-21
+          env: TOXENV=py37
         - python: 3.6
-          env: TOXENV=py36-django-21
+          env: TOXENV=py36
         - python: 3.5
-          env: TOXENV=py35-django-21
+          env: TOXENV=py35
   fast_finish: true
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors

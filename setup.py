@@ -20,7 +20,7 @@ def get_version(*file_paths):
     raise RuntimeError('Unable to find version string.')
 
 
-version = get_version("__init__.py")
+version = get_version("pyontruck", "__init__.py")
 
 if sys.argv[-1] == 'publish':
     try:
