@@ -4,4 +4,4 @@
 # Verified bug on Python 3.5.1
 wheel
 pytz==2019.1
-PyYAML==5.1
+PyYAML==5.4
